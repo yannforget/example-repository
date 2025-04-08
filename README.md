@@ -19,6 +19,8 @@ This repository is designed for 5 people to practice Git collaboration:
 3. **Person 3**: `nutrition_analysis.py` Add a new nutrition indicator to the nutrition analysis (see end of file for instructions)
 5. **Person 4**: `docs.md` Add links to DHS and DHIS2 websites (see file content for instructions)
 
+The assigned person should also remove the "TODO" comments in the file.
+
 ## Collaboration Workflow
 
 For each person:
