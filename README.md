@@ -8,6 +8,7 @@ This repository contains simple Python scripts for analyzing global health data 
 - `vaccination_coverage.py`: Calculates vaccination coverage rates using DHIS2 data
 - `nutrition_analysis.py`: Processes child nutrition statistics across regions
 - `docs.md`: Documentation on how to use these scripts and data sources
+- `example_notebook.ipynb`: Jupyter notebook demonstrating how to use the scripts with visualizations
 
 ## Git Collaboration Exercise
 
