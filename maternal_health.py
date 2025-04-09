@@ -47,10 +47,12 @@ def analyze_maternal_indicators():
         "postnatal_care",
     ]:
         mean_val = df[indicator].mean()
+        median_val = df[indicator].median()
         min_val = df[indicator].min()
         max_val = df[indicator].max()
         print(f"{indicator.replace('_', ' ').title()}:")
         print(f"  Mean: {mean_val:.1f}")
+        print(f"  Median: {median_val:.1f}")
         print(
             f"  Min: {min_val:.1f} (Region: {df.loc[df[indicator] == min_val, 'region'].iloc[0]})"
         )
@@ -72,5 +74,3 @@ def analyze_maternal_indicators():
 if __name__ == "__main__":
     # Analyze the maternal health data
     maternal_data = analyze_maternal_indicators()
-
-    # TODO: Include median in printed statistics
