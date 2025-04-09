@@ -66,11 +66,11 @@ def analyze_nutrition_data():
     # Classify provinces by stunting severity (WHO classification)
     print("\nStunting Severity Classification by Province:")
     for _, row in df.iterrows():
-        if row["stunting"] < 20:
+        if row["stunting"] < 10:
             severity = "Low severity"
-        elif 20 <= row["stunting"] < 30:
+        elif 20 <= row["stunting"] < 20:
             severity = "Medium severity"
-        elif 30 <= row["stunting"] < 40:
+        elif 30 <= row["stunting"] < 30:
             severity = "High severity"
         else:
             severity = "Very high severity"
@@ -90,8 +90,3 @@ if __name__ == "__main__":
     # Analyze nutrition data
     nutrition_data = analyze_nutrition_data()
 
-    # TODO: Change thresholds for stunting severity:
-    # Low severity: < 10%
-    # Medium severity: 10% - 20%
-    # High severity: 20% - 30%
-    # Very high severity: > 30%
