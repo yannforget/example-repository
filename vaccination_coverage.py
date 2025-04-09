@@ -39,6 +39,12 @@ data = {
         5142,
         4789,
     ],  # Population of children under 1 year
+    "population_under5": [
+        2103,
+        4521,
+        8431,
+        5743
+    ], # Population of children under 5 years old (and over 1)
 }
 
 
@@ -52,17 +58,22 @@ def calculate_vaccination_coverage():
     print("=============================")
 
     # Calculate national coverage (weighted by population)
-    national_coverage = {}
+    national_coverage1 = {}
+    national_coverage5 = {}
     for vaccine in [
         "bcg_coverage",
         "penta1_coverage",
         "penta3_coverage",
         "measles_coverage",
     ]:
-        weighted_coverage = sum(df[vaccine] * df["population_under1"]) / sum(
+        weighted_coverage1 = sum(df[vaccine] * df["population_under1"]) / sum(
             df["population_under1"]
         )
-        national_coverage[vaccine] = weighted_coverage
+        weighted_coverage5 = sum(df[vaccine] * df["population_under5"]) / sum(
+            df["population_under5"]
+        )
+        national_coverage1[vaccine] = weighted_coverage1
+        national_coverage5[vaccine] = weighted_coverage5
 
     print("\nNational Coverage Estimates:")
     for vaccine, coverage in national_coverage.items():
@@ -101,5 +112,3 @@ def calculate_vaccination_coverage():
 if __name__ == "__main__":
     # Analyze vaccination coverage
     vaccination_data = calculate_vaccination_coverage()
-
-    # TODO: Change threshold for low Penta3 coverage to <60%
