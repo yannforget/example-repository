@@ -13,7 +13,7 @@ data = {
     "anc_coverage": [76.2, 64.8, 82.3, 59.7, 71.5],  # % women with 4+ ANC visits
     "skilled_birth_attendance": [
         82.7,
-        58.9,
+        58.8,
         88.4,
         62.3,
         75.8,
